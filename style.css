@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.image-side {
+    width: 100%;
+    min-height: 576px;
+    background: url('./bg.jpg') no-repeat right/cover;
+    padding: 2rem;
+    color: white;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.image-side::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5100ffb3;
+    z-index: -1;
+}
+
+.text {
+    font-size: 1.125rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.image-side h1 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.image-side p {
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.form-side {
+    min-height: 450px;
+    width: 100%;
+    padding: 0.5rem 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-side form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-side form > * {
+    display: block;
+    width: 100%;
+}
+
+.form-side label {
+    margin-bottom: 0.5rem;
+}
+
+.form-side input {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    padding: 1rem;
+    background-color: #EDEDED;
+    border: 1px solid #C7C7C7;
+    margin-bottom: 1.7rem;
+}
+
+.form-side form input:nth-of-type(3) {
+    margin-top: 1.6rem;
+    background-color: #5100ff;
+    color: white;
+}

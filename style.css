@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 0.4s ease;
 }
 
 html {
@@ -17,8 +18,10 @@ html {
     background: url('./bg.jpg') no-repeat right/cover;
     padding: 2rem;
     color: white;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 0;
     text-align: center;
@@ -55,9 +58,9 @@ html {
 }
 
 .form-side {
-    min-height: 450px;
+    min-height: 330px;
     width: 100%;
-    padding: 0.5rem 1.5rem 2.5rem;
+    padding: 0.5rem 2rem 2.5rem;
     display: flex;
     align-items: center;
 }
@@ -68,8 +71,14 @@ html {
     flex-direction: column;
 }
 
+.form-side .colmn {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
 .form-side form > * {
-    display: block;
     width: 100%;
 }
 
@@ -86,8 +95,73 @@ html {
     margin-bottom: 1.7rem;
 }
 
-.form-side form input:nth-of-type(3) {
-    margin-top: 1.6rem;
+.form-side form .btn {
+    margin-top: 1.3rem;
     background-color: #5100ff;
     color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 770px) {
+    .image-side {
+        padding: 4rem;
+    }
+
+    .image-side h1 {
+        max-width: 25ch;
+    }
+
+    .image-side p {
+        max-width: 40ch;
+    }
+
+    .form-side .colmn {
+        width: 45%;
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-side form .btn {
+        width: 187px;
+    }
+}
+
+@media screen and (min-width: 1000px) { /* 1280px */
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    .image-side {
+        width: 50%;
+        margin-bottom: 0;
+        text-align: right;
+        padding: 8rem;
+    }
+
+    .image-side h1 {
+        margin-bottom: 1.5rem   ;
+    }
+    
+    .form-side {
+        padding-inline: 6.4rem;
+        width: 50%;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .flex > * {
+        margin-bottom: 1rem;
+    }
+
+    .form-side .colmn {
+        width: 100%;
+    }
+    
 }
